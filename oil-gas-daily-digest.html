@@ -318,7 +318,7 @@ function renderPrices(prices) {
     {name:"LNG Spot (Asia)", unit:"USD/mmBTU", key:"lng_asia", prefix:"$"}
   ];
   document.getElementById("pricePanel").innerHTML = items.map(function(item) {
-    var p = prices[item.key]; if (!p) return "";
+   var p = prices[item.key]; if (!p || p.value == null) return "";
     var cls = p.change > 0 ? "up" : p.change < 0 ? "down" : "flat";
     var arrow = p.change > 0 ? "▲" : p.change < 0 ? "▼" : "—";
     return "<div class='price-card'><div><div class='price-name'>" + item.name + "</div><div class='price-unit'>" + item.unit + "</div></div>" +

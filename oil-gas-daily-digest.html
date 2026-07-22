@@ -404,7 +404,7 @@ async function fetchNews() {
         "anthropic-version": "2023-06-01"
       },
       body: JSON.stringify({
-        model: "claude-haiku-4-5-20251001",
+        model: "claude-sonnet-4-5",
         max_tokens: 16000,
         system: "You are a JSON API. After searching the web, output ONLY valid JSON. No markdown, no backticks, no explanations. Pure JSON starting with { and ending with }.",
         tools: [{ type: "web_search_20250305", name: "web_search" }],
